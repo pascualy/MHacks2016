@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block content %}
+	{% if not auth%}
+	    <p> <a href="/z1gcpbq33di/pa4/user/login">[Login]</a> or <a href="/z1gcpbq33di/pa4/user">[Register]</a> 
+	    or <a href="/z1gcpbq33di/pa4/albums">[Browse Public Albums]</a> 
+		<p class="font-18">
+		  Welcome to frame<strong>overflow</strong>. An easy way to manage your pictures online from anywhere. 
+		</p>
+		<div class="container col-md-3">
+			<h2>Public Albums</h2>
+			<table class="table table-bordered">
+	  		<tbody>
+					{% for album in publicalbums %}
+	 					<tr>
+				     	<td><a href="/z1gcpbq33di/pa4/album?id={{ album[2] }}"> {{ album[1] }} by {{ album[0] }}</a></td>
+	   				</tr>
+					{% endfor %}
+	  		</tbody>
+	  	</table>
+		</div>
+	{% endif %}
+
+	{% if auth %}
+		<p class="font-18">
+		  Welcome to frame<strong>overflow</strong>. An easy way to manage your pictures online from anywhere. 
+		</p>
+		<div class="container col-md-3">
+			<h2>My Albums</h2>
+			<table class="table table-bordered">
+				<tbody>
+					{% for album in myalbums %}
+						<tr>
+							<td><a href="/z1gcpbq33di/pa4/album?id={{ album[1] }}"> {{ album[0] }} </a></td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+		{% if privatealbums|length > 0 %}
+		<div class="container col-md-3">
+			<h2>Private Albums</h2>
+			<table class="table table-bordered">
+	  		<tbody>
+					{% for album in privatealbums %}
+	 					<tr>
+				     	<td><a href="/z1gcpbq33di/pa4/album?id={{ album[2] }}"> {{ album[1] }} by {{ album[0] }}</a></td>
+	   				</tr>
+					{% endfor %}
+	  		</tbody>
+	  		</table>
+		</div>
+		{% endif %}
+		<div class="container col-md-3">
+			<h2>Public Albums</h2>
+			<table class="table table-bordered">
+	  		<tbody>
+					{% for album in publicalbums %}
+	 					<tr>
+				     	<td><a href="/z1gcpbq33di/pa4/album?id={{ album[2] }}"> {{ album[1] }} by {{ album[0] }}</a></td>
+	   				</tr>
+					{% endfor %}
+	  		</tbody>
+	  		</table>
+		</div>
+	{% endif %}
+{% endblock %}
