@@ -1,0 +1,57 @@
+/* Base page */
+input[type=submit] {
+	color: #3366BB;
+	background: none;
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+.trademark {
+	float: right;
+	font-size: 32px;
+	vertical-align: middle;
+}
+
+/* Index page */
+.font-18 {
+	font-size: 18px;
+}
+
+/* Albums page */
+
+/* Album page */
+.vertical-align-mid {
+	vertical-align: middle;
+}
+
+.add-image-table {
+	max-width: 250px;
+}
+
+.table-responsive {
+	overflow-x: auto;
+}
+
+.table th, .table td {
+	border-top: none !important;
+}
+
+.fixed-table {
+	table-layout: fixed;
+	border-top: none !important;
+}
+
+.left-align {
+	text-align: left;
+}
+
+/* Pic page */
+.caption {
+	font-size: 18px;
+}
+
+#num_favorites, #latest_favorite {
+	border: 0 none;
+	width: 1000px;
+}
