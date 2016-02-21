@@ -1,0 +1,68 @@
+<head>
+
+</head>
+<body>
+</body>
+
+<template name="client">
+	<div class="col-md-2"></div>
+	<div style="display:block" class="col-md-8 panel panel-default">
+		<div id="contract_table">
+			<div class="panel-heading">Available middle<strong>out</strong> Contacts</div>
+			<!-- <div class="panel-body"></div>-->
+
+			<table class="table">
+		  		<thead>
+		        	<tr>
+		            	<th>Title</th>
+		            	<th>Description</th>
+		            	<th>Price/Hr</th>
+		            	<th>Action</th>
+		        	</tr>
+		    	</thead>
+		    	<tbody>
+		    		{{#each contracts}}
+		    			<tr>
+	                		{{> contract  }}
+	            			<td> 
+<!--<button class="btn btn-info" onclick="showDetails({{contract.id}})" type="submit">Details</button> -->
+								<button class="btn btn-info" onclick="executeContract({{contract.id}})" type="submit">Execute</button>
+	            			</td>
+	            		</tr>
+	            	{{/each}}
+		    	</tbody>
+		  	</table>
+		</div>
+		<div id="contract_detail"  style="display:none">
+			<table class="table">
+		  		<thead>
+		        	<tr>
+		            	<th>Title</th>
+		            	<th>Description</th>
+		            	<th>Price/Hr</th>
+		            	<th>Action</th>
+		        	</tr>
+		    	</thead>
+		    	<tbody>
+		    			<tr>
+
+	            		</tr>
+
+		    	</tbody>
+		  	</table>
+		</div>
+	</div>
+
+
+
+
+	<div class="col-md-2"></div>
+</template>
+
+
+<template name="contract">
+        	<td>{{title}}</td>
+            <td>{{description}}</td>
+            <td>{{price}}</td>
+</template>
+
