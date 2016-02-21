@@ -16,10 +16,6 @@ Template.client.contracts = function () {
   return contracts;
 };
 
-showDetails = function(){
-
-};
-
 executeContract =  function(contractid, price){
 	var table = document.getElementById('contract_table');
 	var form = document.getElementById('contract_detail');
