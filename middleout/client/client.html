@@ -33,7 +33,7 @@
 	            			<td> 
 <!--<button class="btn btn-info" onclick="showDetails({{contract.id}})" type="submit">Details</button> -->
 								<div class="center">
-								<button class="btn btn-info" onclick='executeContract(\"{{id}}\",{{price}})' type="submit">Execute</button></div>
+								<button class="btn btn-info" onclick='executeContract("{{id}}","{{price}}")' type="submit">Execute</button></div>
 	            			</td>
 	            		</tr>
 	            	{{/each}}
@@ -41,12 +41,26 @@
 		  	</table>
 		</div>
 		<div id="contract_detail"  style="display:none">
-			<form id="transactionForm" onsubmit="Transaction()">
-				Your node address: <input id="senderAddress" type="text"><br/>
-				Destination node address: <input id="contractAddress" type="text" size="100" readonly><br/>
-				Value of Contract: <input id="contractValue" type="text" readonly>
+			<table class="formTable contracts" cellspacing="0" border="0">
+				<form id="transactionForm" onsubmit="Transaction()">
+					<tr>
+						<td>Your node address:</td>
+						<td><input id="senderAddress" type="text" size="50"></td>
+					</tr>
+					<tr>
+						<td>Destination node address:</td>
+						<td><input class="read" id="contractAddress" type="text" size="50" readonly></td>
+					</tr>
+					<tr>
+						<td>Value of Contract:</td>
+						<td><input class="read" id="contractValue" type="text" readonly></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><button type="button">Execute Order!</button></td>
+					</tr>
 			</form>
-
+			</table>
 			<!-- <table class="table">
 		  		<thead>
 		        	<tr>

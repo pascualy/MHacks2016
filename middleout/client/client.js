@@ -3,13 +3,13 @@ Template.client.contracts = function () {
   var contracts =  [
     {id: "daa24d02bad7e9d6a80106db164bad9399a0423e", title: "Advertisement in GGBrown",
 	description: "Blah Blah Blah",
-	price: "10"},
+	price: "10 eth"},
     {id: "daa24d02bad7e9d6a80106db164bad9399a0423e", title: "Advertisement in GGBrown",
 	description: "Blah Blah Blah",
-	price: "10"},
+	price: "10 eth"},
 	{id: "daa24d02bad7e9d6a80106db164bad9399a0423e", title: "Advertisement in GGBrown",
 	description: "Blah Blah Blah",
-	price: "10"}
+	price: "10 eth"}
   ];
   console.log(contracts[0].id)
   console.log(contracts[1].id)
