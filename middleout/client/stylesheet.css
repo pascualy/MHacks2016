@@ -55,3 +55,15 @@ input[type=submit] {
 	border: 0 none;
 	width: 1000px;
 }
+
+.contracts th {
+	font-size: 18pt;
+	text-align: center;
+}
+.contracts td {
+	font-size: 14pt;
+}
+
+.center {
+	text-align: center;
+}
