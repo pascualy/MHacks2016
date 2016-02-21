@@ -35,13 +35,7 @@ executeContract = function(contractid, price){
 }
 
 transaction = function() {
-	var transactionObject = {to:"0x9f38a38c3492ed0737c27ab7c3b52c4b2d933392", from: web3.eth.coinbase, value: web3.toWei(.000000000001, "ether")};
-	try {
-		web3.personal.unlockAccount(web3.eth.coinbase, "middleout");
-	}
-	catch(err){
-		console.log("nope")
-	}
+	var transactionObject = {to:"0x69a827adde364af2d35770fa89100933e1e47eae", from: web3.eth.coinbase, value: web3.toWei(.000000000001, "ether"), url:document.getElementById("url").value};
 	web3.eth.sendTransaction(transactionObject);
 }
 

@@ -5,6 +5,35 @@
 
 
 <template name="service">
-<h1> Service </h1>
-
+	<div class="col-md-2"></div>
+	<div class="col-md-8" id="contract_detail">
+		<table class="formTable contracts" cellspacing="0" border="0">
+			<!--seller address, price int, service type (adserver), location, desc-->
+			<tr>
+				<td>Your node address:</td>
+				<td><input id="nodeAddress" type="text" value={{coinbase}} size="50" readonly></td>
+			</tr>
+			<tr>
+				<td>Service type (adserver, webcam, etc.):</td>
+				<td><input id="serviceType" type="text" size="50"></td>
+			</tr>
+			<tr>
+				<td>Device Location</td>
+				<td><input id="deviceLocation" type="text"></td>
+			</tr>
+			<tr>
+				<td>Device Description</td>
+				<td><input id="deviceDescription" type="text"></td>
+			</tr>
+			<tr>
+				<td>Value of Contract</td>
+				<td><input id="valueOfContract" type="text"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><button class="btn btn-info" id="createButton" onclick="create()">Create Contract!</button></td>
+			</tr>
+		</table>
+	</div>
+	<div class="col-md-2"></div>
 </template>

@@ -83,3 +83,7 @@ input[type=submit] {
 .read {
 	border:0;
 }
+
+#contract_detail td {
+	font-size:14pt;
+}
