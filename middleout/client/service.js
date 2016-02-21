@@ -4,6 +4,7 @@ Template.service.coinbase = function () {
 };
 
 create = function() {
+	
 	var _url = "" /* var of type string here */ ;
 	var _description = document.getElementById("deviceDescription").value ;
 	var _servicetype = document.getElementById("serviceType").value ;
@@ -24,9 +25,16 @@ create = function() {
 	         console.log('Contract mined! address: ' + contract.address + ' transactionHash: ' + contract.transactionHash);
 	    }
 	 });
+	document.getElementById("serviceType").value = "";
+	document.getElementById("deviceLocation").value = "";
+	document.getElementById("deviceDescription").value = "";
+	document.getElementById("valueOfContract").value = "";
 
 	var contract = web3.eth.contract(purchase.abi).at(purchase.address);
 	contract.Purchase("www", "dow", "dow", "dow");
+
+	
+
 
 }
 

@@ -2,15 +2,15 @@ Template.client.contracts = function () {
 
   var i = 0; // This will be contract address
   var contracts =  [
-    {id: "daa24d02bad7e9d6a80106db164bad9399a0423e", title: "Advertisement in GGBrown",
-	description: "Blah Blah Blah",
-	price: "10 eth"},
-    {id: "daa24d02bad7e9d6a80106db164bad9399a0423e", title: "Advertisement in GGBrown",
-	description: "Blah Blah Blah",
-	price: "10 eth"},
-	{id: "daa24d02bad7e9d6a80106db164bad9399a0423e", title: "Advertisement in GGBrown",
-	description: "Blah Blah Blah",
-	price: "10 eth"}
+    {id: "daa24d02bad7e9d6a80106db164bad9399a0423e", title: "Display in GGBrown Laboratory",
+	description: "This display is located in the entrance of the GGBrown Laboratory.",
+	price: "10 Wei"},
+    {id: "daa24d02bad7e9d6a80106db164bad9399a0423e", title: "Webcam overlooking Diag from BBB",
+	description: "This webcam provides pristine views of the torn up diag.",
+	price: "50 eth"},
+	{id: "daa24d02bad7e9d6a80106db164bad9399a0423e", title: "Microphone located in BBB lobby",
+	description: "Hear all of the unnerving sounds produced by computer science students",
+	price: "100 eth"}
   ];
   return contracts;
 };
