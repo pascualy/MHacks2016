@@ -10,9 +10,6 @@
 	<div class="col-md-2"></div>
 	<div style="display:block" class="col-md-8 panel panel-default">
 		<div id="contract_table">
-			<!-- <div class="panel-heading">Available middle<strong>out</strong> Contacts</div> -->
-			<!-- <div class="panel-body"></div>-->
-
 			<table class="table contracts">
 				<col style="width:30%">
 				<col style="width:45%">
@@ -33,7 +30,7 @@
 	            			<td> 
 <!--<button class="btn btn-info" onclick="showDetails({{contract.id}})" type="submit">Details</button> -->
 								<div class="center">
-								<button class="btn btn-info" onclick='executeContract("{{id}}","{{price}}")' type="submit">Execute</button></div>
+								<button class="btn btn-info" onclick='selectContract("{{id}}","{{price}}")' type="submit">Select</button></div>
 	            			</td>
 	            		</tr>
 	            	{{/each}}
@@ -41,9 +38,9 @@
 		  	</table>
 		</div>
 		<div id="contract_detail"  style="display:none;">
-			<a href="" onclick='executeContract("nope", "nope")'>&lt;- back to contract lists</a>
+			<a href="" onclick='selectContract("nope", "nope")'>&lt;- back to contract lists</a>
 			<table class="formTable contracts" cellspacing="0" border="0">
-				<form id="transactionForm" onsubmit="Transaction()">
+				
 					<tr>
 						<td>Your node address:</td>
 						<td><input id="senderAddress" type="text" size="50"></td>
@@ -58,26 +55,10 @@
 					</tr>
 					<tr>
 						<td></td>
-						<td><button type="button">Execute Order!</button></td>
+						<td><button onclick="transaction()" type="submit">Execute Order!</button></td>
 					</tr>
-			</form>
+			
 			</table>
-			<!-- <table class="table">
-		  		<thead>
-		        	<tr>
-		            	<th>Title</th>
-		            	<th>Description</th>
-		            	<th>Price/Hr</th>
-		            	<th>Action</th>
-		        	</tr>
-		    	</thead>
-		    	<tbody>
-		    			<tr>
-
-	            		</tr>
-
-		    	</tbody>
-		  	</table> -->
 		</div>
 	</div>
 
